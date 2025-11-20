@@ -1,0 +1,33 @@
+# Why this matters:
+# Even though we're using specific COPY commands in the dockerfile, the entire context is still sent to the Docker daemon first.
+# Your .dockerignore prevents these files from being sent to Docker's build context, which: speeds up builds
+# (less data to transfer), reduces image size (less stuff copied), prevents secrets leaking (.env files, etc.)
+
+# Build outputs
+build/
+app/build/
+.gradle/
+.kotlin/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Version control
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+
+# Local files
+.DS_Store
+.env
+local.properties
+
+# Test and coverage reports
+**/test-results/
+**/coverage/
