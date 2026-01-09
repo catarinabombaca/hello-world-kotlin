@@ -33,3 +33,6 @@ build
 
 # Ignore IDE files
 .idea/
+
+# Keep this file: the wrapper is a key part of making Gradle projects portable and self-contained.
+!gradle/wrapper/gradle-wrapper.jar
