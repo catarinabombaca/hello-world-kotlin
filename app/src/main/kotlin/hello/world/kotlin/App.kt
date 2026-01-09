@@ -17,6 +17,7 @@ val app: HttpHandler = routes(
 )
 
 fun main() {
+    //TODO: how to configure to say a different port depending on local or docker?
     val server= app.asServer(Undertow(9000)).start()
     println("Server started on port ${server.port()} 🚀")
 }
